@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="image:${list}">
+    <h3 th:text="${image.title}"></h3>
+    <img th:src="${image.url}" alt="">
+    <a th:href="'delete?id='+${image.id}">删除</a>
+    <hr>
+</div>
+</body>
+</html>
